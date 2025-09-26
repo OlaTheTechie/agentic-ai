@@ -19,8 +19,10 @@ def subtractor(state: AgentState) -> AgentState:
     return state
 
 def router(state: AgentState): 
-    if state["operation"] == "-": return "subtractor_node"
-    elif state["operation"] == "+": return "adder_node"
+    if state["operation"] == "-": 
+        return "subtractor_node"
+    elif state["operation"] == "+": 
+        return "adder_node"
 # build the graph 
 
 graph = StateGraph(AgentState)
